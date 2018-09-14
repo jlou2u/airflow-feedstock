@@ -1,0 +1,22 @@
+diff --git a/setup.py b/setup.py
+index af8b195..e519d50 100644
+--- a/setup.py
++++ b/setup.py
+@@ -121,7 +121,7 @@ def write_version(filename=os.path.join(*['airflow',
+     with open(filename, 'w') as a:
+         a.write(text)
+ 
+-async = [
++async_packages = [
+     'greenlet>=0.4.9',
+     'eventlet>= 0.9.7',
+     'gevent>=0.13'
+@@ -314,7 +314,7 @@ def do_setup():
+             'devel_ci': devel_ci,
+             'all_dbs': all_dbs,
+             'atlas': atlas,
+-            'async': async,
++            'async': async_packages,
+             'azure_blob_storage': azure_blob_storage,
+             'azure_data_lake': azure_data_lake,
+             'cassandra': cassandra,
